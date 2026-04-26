@@ -1,0 +1,26 @@
+# Git
+.git
+.gitignore
+.github/
+
+# Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Byte-compiled / optimized / DLL files
+zirka_bot/__pycache__/
+
+# Distribution / packaging
+env/
+
+# Virtual environment
+.env
+
+# PyCharm
+.idea
+
+# user
+logs
+brief.*
+README.md

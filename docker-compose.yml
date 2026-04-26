@@ -1,0 +1,52 @@
+version: '3.14'
+
+services:
+
+  Zirka_bot:
+        container_name: ZirkaBot
+        image: Zirka_bot
+
+        build: .
+
+        environment:
+            - BOT_TOKEN=${BOT_TOKEN}
+            - AI_KEY=${AI_KEY}
+            - VCHAT_ID=${VCHAT_ID}
+            - DCHAT_ID=${DCHAT_ID}
+            - SCHAT_ID=${SCHAT_ID}
+
+        ports:
+            - "443:443"
+
+        volumes:
+          - ./logs:/~/ZirkaBot/logs
+
+        restart: on-failure
+
+volumes:
+  logs:
+
+
+# -------------------------------
+# Create and start container:
+# $ export BOT_TOKEN=<BOT_TOKEN>
+# $ export AI_KEY=<AI_KEY>
+# $ export VCHAT_ID=<VCHAT_ID>
+# $ export DCHAT_ID=<DCHAT_ID>
+# $ export SCHAT_ID=<SCHAT_ID>
+# $ docker-compose up -d
+# -------------------------------
+# Stop lifted containers:
+# $ docker-compose stop
+# -------------------------------
+# Start stopped containers
+# $ docker-compose start
+# -------------------------------
+# Stop and delete containers and network:
+# $ docker-compose down
+# -------------------------------
+# Remove image:
+# $ docker rmi Zirka_bot
+# -------------------------------
+# Clear logs:
+# $ sudo rm -rf logs/*
