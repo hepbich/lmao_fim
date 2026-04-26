@@ -1,0 +1,8 @@
+fuzzywuzzy==0.18.0
+pytz==2026.1.1
+aiogram==3.25.1
+python-dotenv==1.2.2
+python-Levenshtein==0.20.9
+ruamel.yaml==0.19.1
+openai==0.31.2
+requests==2.28.2
